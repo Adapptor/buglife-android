@@ -29,7 +29,7 @@ import okhttp3.Response;
 public class NetworkManager {
 
     private static final int INITIAL_TIMEOUT_MS = 60 * 1000;
-    public static final String BUGLIFE_URL = "https://www.buglife.com";
+    public static String BUGLIFE_URL;
 
 
     private static NetworkManager mInstance;
