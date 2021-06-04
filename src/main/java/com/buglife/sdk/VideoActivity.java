@@ -6,10 +6,11 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.KeyEvent;
 import android.widget.MediaController;
 import android.widget.VideoView;
+
+import androidx.annotation.Nullable;
 
 import java.io.File;
 

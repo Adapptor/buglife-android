@@ -24,9 +24,10 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.app.Fragment;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 public final class PermissionHelper extends Fragment {
     private static final int REQUEST_PERMISSIONS = 10;

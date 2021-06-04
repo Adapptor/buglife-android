@@ -19,13 +19,14 @@ package com.buglife.sdk;
 
 import android.content.Context;
 import android.os.Build;
-import android.support.annotation.Nullable;
 import android.telephony.CellInfo;
 import android.telephony.CellInfoGsm;
 import android.telephony.CellSignalStrengthGsm;
 import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
+
+import androidx.annotation.Nullable;
 
 import com.buglife.sdk.Log;
 

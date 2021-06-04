@@ -19,7 +19,8 @@ package com.buglife.sdk;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 import java.util.List;
 

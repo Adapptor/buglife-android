@@ -24,8 +24,9 @@ import android.graphics.Color;
 import android.graphics.PointF;
 import android.graphics.Rect;
 import android.graphics.RectF;
-import android.support.annotation.NonNull;
 import android.util.TypedValue;
+
+import androidx.annotation.NonNull;
 
 class Annotation {
 

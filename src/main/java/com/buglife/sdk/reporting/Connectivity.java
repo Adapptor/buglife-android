@@ -21,8 +21,9 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.Network;
 import android.net.NetworkInfo;
-import android.support.annotation.Nullable;
 import android.telephony.TelephonyManager;
+
+import androidx.annotation.Nullable;
 
 /**
  * Provides information about current network connectivity

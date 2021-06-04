@@ -22,8 +22,9 @@ import android.app.job.JobService;
 import android.content.ComponentName;
 import android.content.Context;
 import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.widget.Toast;
+
+import androidx.annotation.RequiresApi;
 
 import com.buglife.sdk.IOUtils;
 import com.buglife.sdk.Log;

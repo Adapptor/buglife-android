@@ -1,9 +1,10 @@
 package com.buglife.sdk;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.widget.LinearLayout;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 abstract class InputFieldView extends LinearLayout {
 
