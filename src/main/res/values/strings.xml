@@ -6,7 +6,7 @@
     <string name="thanks_for_filing_a_bug">Thanks for filing a bug!</string>
     <string name="error_unable_to_read_screenshot">Oops! Buglife was unable to capture your screenshot.</string>
     <string name="help_us_make_this_app_better">Help us make this app better!</string>
-    <string name="report_a_bug">Report a Bug</string>
+    <string name="report_a_bug">Send Feedback</string>
     <string name="cancel">Cancel</string>
     <string name="ok">OK</string>
     <string name="next">Next</string>
@@ -22,7 +22,7 @@
     <string name="error_process_report">There was an error processing bug report!</string>
     <string name="error_save_screenshot">There was an error saving screenshot!</string>
     <string name="error_copying_screenshot">There was an error copying the screenshot!</string>
-    <string name="summary_field_title">What happened?</string>
+    <string name="summary_field_title">Feedback</string>
     <string name="parameters">Parameters</string>
     <string name="shake_detector_on">Shake detector ON</string>
     <string name="shake_detector_off">Shake detector OFF</string>
