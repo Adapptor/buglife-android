@@ -17,6 +17,8 @@ abstract class InputFieldView extends LinearLayout {
             return new TextInputFieldView(context);
         } else if (inputField instanceof PickerInputField) {
             return new PickerInputFieldView(context);
+        } else if (inputField instanceof ImagePickerInputField) {
+            return new ImagePickerInputFieldView(context);
         } else {
             throw new Buglife.BuglifeException("Unexpected input field type: " + inputField);
         }

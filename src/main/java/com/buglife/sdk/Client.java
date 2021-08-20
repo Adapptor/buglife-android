@@ -17,6 +17,8 @@
 
 package com.buglife.sdk;
 
+import static com.buglife.sdk.ImagePickerInputField.IMAGE_PICKER_ATTRIBUTE_NAME;
+
 import android.app.Activity;
 import android.app.Application;
 import android.app.FragmentManager;
@@ -228,6 +230,10 @@ final class Client implements ForegroundDetector.OnForegroundListener, Invocatio
             TextInputField summaryInputField = TextInputField.summaryInputField();
             inputFields = new ArrayList<>();
             inputFields.add(summaryInputField);
+
+            ImagePickerInputField imageInputField = new ImagePickerInputField(IMAGE_PICKER_ATTRIBUTE_NAME);
+            imageInputField.setTitle("Add image");
+            inputFields.add(imageInputField);
         }
 
         // return a copy of the array so that adding new fields during

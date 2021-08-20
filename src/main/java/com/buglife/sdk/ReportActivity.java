@@ -25,7 +25,9 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -43,6 +45,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.buglife.sdk.reporting.ReportSubmissionCallback;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -50,6 +53,7 @@ import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 import static android.view.MenuItem.SHOW_AS_ACTION_ALWAYS;
 import static com.buglife.sdk.ActivityUtils.INTENT_KEY_ATTACHMENT;
 import static com.buglife.sdk.ActivityUtils.INTENT_KEY_BUG_CONTEXT;
+import static com.buglife.sdk.ImagePickerInputField.PICK_IMAGE_REQUEST_CODE;
 
 public class ReportActivity extends AppCompatActivity {
 
@@ -198,6 +202,26 @@ public class ReportActivity extends AppCompatActivity {
 
         if (requestCode == ScreenshotAnnotatorActivity.REQUEST_CODE) {
             if (resultCode == Activity.RESULT_OK) {
+                mAttachmentAdapter.notifyDataSetChanged();
+            }
+        }
+
+        if (requestCode == PICK_IMAGE_REQUEST_CODE) {
+            if (resultCode == Activity.RESULT_OK) {
+                Uri uri = data.getData();
+                File file = AttachmentUtils.copyFile(this, uri);
+
+                if (file == null) {
+                    Log.e("Buglife", "Error getting copy of attachment file");
+                    return;
+                }
+
+                String mimeType = AttachmentUtils.getMimeType(this, uri);
+                FileAttachment attachment = new FileAttachment(file, mimeType);
+                mBugContext.addAttachment(attachment);
+
+                final List<FileAttachment> mediaAttachments = mBugContext.getMediaAttachments();
+                mAttachmentAdapter.setAttachments(mediaAttachments);
                 mAttachmentAdapter.notifyDataSetChanged();
             }
         }
